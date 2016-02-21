@@ -8,7 +8,7 @@
 
     $ npm install superagent-absoluteurl
 
-$$ Usage
+## Usage
 
 ```js
 var request = require('superagent'),
@@ -20,6 +20,7 @@ request
     res = absoluteurl(res);
     // Do something
 });
+```
 
 ## License
 
