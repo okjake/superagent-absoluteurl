@@ -1,0 +1,24 @@
+{
+    "name": "superagent-absoluteurl",
+    "version": "0.0.1",
+    "description": "Mapping links, images , css and javascript and change addresses relative to absolute.",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/andrehrf/superagent-absoluteurl.git"
+    },
+    "keywords": [
+        "superagent",
+        "absolute",
+        "url"
+    ],
+    "author": "André Ferreira <andrehrf@gmail.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/andrehrf/superagent-absoluteurl/issues"
+    },
+    "homepage": "https://github.com/andrehrf/superagent-absoluteurl",
+    "dependencies": {
+        "cheerio": "^0.20.0"
+    }
+}
