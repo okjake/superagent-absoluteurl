@@ -1,6 +1,6 @@
 {
     "name": "superagent-absoluteurl",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Mapping links, images , css and javascript and change addresses relative to absolute.",
     "main": "index.js",
     "repository": {

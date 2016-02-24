@@ -38,6 +38,7 @@ module.exports = function(res, debug){
         });
         
         res.text = $.html();
+        delete $;//Fix memory usage
     }
 
     return res;
@@ -47,17 +48,9 @@ function replacelink(path, absolteUrl, debug){
     if(typeof path == "string"){
         if(path.substr(0, 1) == "/" && path.substr(0, 2) != "//"){
             var absolutePath = absolteUrl + path;
-
-            if(debug)
-                console.log("Change: "+path+" => "+absolutePath);
-
             return absolutePath;
         } else if(path.substr(0, 2) == "./"){
             var absolutePath = path.replace("./", absolteUrl+"/");
-
-            if(debug)
-                console.log("Change: "+path+" => "+absolutePath);
-
             return absolutePath;
         } else if(path.substr(0, 3) == "../"){
             var parseUrl = url.parse(absolteUrl);
@@ -69,16 +62,9 @@ function replacelink(path, absolteUrl, debug){
 
             absolutePath += path.replace("../", "");
 
-            if(debug)
-                console.log("Change: "+path+" => "+absolutePath);
-
             return absolutePath;        
         } else if(path.substr(0, 4) != "http" && path.substr(0, 2) != "//"){
             var absolutePath = absolteUrl + "/" + path;
-
-            if(debug)
-                console.log("Change: "+path+" => "+absolutePath);
-
             return absolutePath;
         }
         else{
