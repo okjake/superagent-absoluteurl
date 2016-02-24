@@ -4,8 +4,6 @@
  * MIT Licensed
  */
 
-"use strict";
-
 var url = require("url"),
     cheerio = require("cheerio");
 
